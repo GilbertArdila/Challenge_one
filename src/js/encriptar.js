@@ -11,47 +11,52 @@ encriptar.addEventListener("click",function(event){
     var palabra=gettingWord.value;
     //convertimos ese valor en array para poder recorrerlo
     var cripto=Array.from(palabra);
+    //declaramos una variable para captar el cambio
     var reemplazo;
+    //declaramos una variable para comprobar las condiciones
 
-    //recorremos el array y reemplazamos las letras
-    for(var i=0;i<cripto.length;i++){
-        if(cripto[i].includes("a")){
-            reemplazo=cripto[i].replace("a","ai");
-            cripto[i]=reemplazo;
+
+
+    if(esMayus(palabra)===true && esAcento(palabra)===false ){
+        //recorremos el array y reemplazamos las letras
+        for(var i=0;i<cripto.length;i++){
+            if(cripto[i].includes("a")){
+                reemplazo=cripto[i].replace("a","ai");
+                cripto[i]=reemplazo;
+            }
+            else if(cripto[i].includes("e")){
+                reemplazo=cripto[i].replace("e","enter");
+                cripto[i]=reemplazo;
+
+
+            }
+            else if(cripto[i].includes("i")){
+                reemplazo=cripto[i].replace("i","imes");
+                cripto[i]=reemplazo;
+
+
+            }
+            else if(cripto[i].includes("o")){
+                reemplazo=cripto[i].replace("o","ober");
+                cripto[i]=reemplazo;
+
+
+
+            }
+            else if(cripto[i].includes("u")){
+                reemplazo=cripto[i].replace("u","ufat");
+                cripto[i]=reemplazo;
+
+
+            }
+
         }
-        else if(cripto[i].includes("e")){
-            reemplazo=cripto[i].replace("e","enter");
-            cripto[i]=reemplazo;
-
-
-        }
-        else if(cripto[i].includes("i")){
-            reemplazo=cripto[i].replace("i","imes");
-            cripto[i]=reemplazo;
-
-
-        }
-        else if(cripto[i].includes("o")){
-            reemplazo=cripto[i].replace("o","ober");
-            cripto[i]=reemplazo;
-
-
-
-        }
-        else if(cripto[i].includes("u")){
-            reemplazo=cripto[i].replace("u","ufat");
-            cripto[i]=reemplazo;
-
-
-        }
+        //convertimos el array en string y eliminamos las comas
+        var salida=cripto.toLocaleString().replace(/,/g,"");
+        GettingOutWord.value="";
+        GettingOutWord.value+=salida;
 
     }
-
-   //convertimos el array en string y eliminamos las comas
-    var salida=cripto.toLocaleString().replace(/,/g,"");
-    GettingOutWord.value="";
-    GettingOutWord.value+=salida;
-
 })
 
 /* ---------------------------Creamos función para el copy del botón--------------------------------------- */
@@ -107,3 +112,41 @@ desencriptar.addEventListener("click",function(event) {
 
 
 });
+/* ---------------------------Creamos función para verificar mayusculas--------------------------------------- */
+function esMayus(palabra){
+    let encriptacion=true;
+    //quitamos los espacios vacíos
+    palabra=palabra.split("").filter(char => char!==" ");
+    //convertimos la palabra en string de nuevo
+    palabra=palabra.toString();
+    //quitamos las comas que retorna el array
+    palabra=palabra.replace(/,/g,"");
+
+    for(var p=0;p<palabra.length;p++){
+        //convertimos cada letra a mayuscula y la comparamos con la letra de la palabra
+        if(palabra.charAt(p).toUpperCase()===palabra.charAt(p)){
+            alert("Solo debe ingresar letras en minuscula");
+            gettingWord.value="";
+            encriptacion=false;
+        }
+    }
+     return encriptacion;
+}
+/* ---------------------------Creamos función para verificar acentos--------------------------------------- */
+
+function esAcento(palabra){
+    //convertimos el string en array para recorrerlo
+    palabra=palabra.split("");
+
+    var acento=false;
+
+    for(var i=0;i<palabra.length;i++){
+        if(palabra[i]==="á" || palabra[i]==="é" || palabra[i]==="í"
+        || palabra[i]==="ó" || palabra[i]==="ú"){
+            alert("No debes ingresar palabras con acento");
+            gettingWord.value="";
+            acento=true;
+        }
+    }
+    return acento;
+}
