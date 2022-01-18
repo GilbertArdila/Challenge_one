@@ -1,0 +1,116 @@
+body{
+    background-color: lightgrey;
+    border: 0;
+    font-size:1.5em;
+    font-family: "Bookman Old Style", serif;
+;
+}
+header{
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    margin: 10px 20px 10px 20px;
+}
+
+#ingreso{
+    position: relative;
+    left: 50px;
+    margin:10px 10px 10px 10px;
+    width: 30%;
+    background-color:#D3E1E9;
+}
+#encriptar{
+    position: relative;
+    top:10px;
+    left:0;
+    margin:0 10px 30px 10px;
+
+
+}
+#desencriptar{
+    position: relative;
+    top:10px;
+    left:10px;
+    margin:0 10px 30px 10px;
+
+}
+#salida{
+    position: relative;
+    left: 10%;
+    margin:10px 10px 10px 10px;
+    width: 30%;
+    background-color: #D3E1E9;
+}
+#copiar{
+    position: relative;
+    top:10px;
+    left:10px;
+    margin:0 10px 30px 10px;
+}
+footer{
+    background-color:black;
+   position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+@media (max-width:768px){
+
+    #ingreso{
+        left:10%;
+        width:80%
+    }
+    #encriptar{
+        position: relative;
+        top:0;
+        left:0;
+        margin:10px 10px 30px 10px;
+
+
+    }
+    #desencriptar{
+        position: relative;
+        top:0;
+        left:10px;
+        margin:10px 10px 30px 10px;
+
+    }
+    #salida{
+        left:10%;
+        width:80%
+    }
+    #copiar{
+        position: relative;
+        top:0;
+        left:0;
+        margin:10px 10px 30px 10px;
+    }
+    footer img{
+        width:100px;
+    }
+}
+@media (max-width: 576px){
+    body {
+        background-color:red;
+    }
+    header{
+        margin: 0;
+    }
+    #ingreso{
+        margin-bottom: 2px;
+
+    }
+    #salida{
+       margin-top: 10px;
+
+    }
+    #encriptar{
+        margin-bottom: 2px;
+    }
+    #desencriptar{
+        margin-bottom: 2px;
+    }
+    #copiar{
+        margin-bottom: 2px;
+    }
+}
