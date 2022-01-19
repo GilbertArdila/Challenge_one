@@ -112,7 +112,7 @@ desencriptar.addEventListener("click",function(event) {
 
 
 });
-/* ---------------------------Creamos función para verificar mayusculas--------------------------------------- */
+/* ---------------------------Creamos función para verificar mayúsculas--------------------------------------- */
 function esMayus(palabra){
     let encriptacion=true;
     //quitamos los espacios vacíos
