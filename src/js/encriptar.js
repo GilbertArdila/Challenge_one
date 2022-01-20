@@ -76,7 +76,6 @@ desencriptar.addEventListener("click",function(event) {
     //capturamos el valor ingresado en el input
     var palabra = gettingWord.value;
     //convertimos ese valor en array para poder recorrerlo
-    var cripto = Array.from(palabra);
     var reemplazo;
 
     for(var i=0;i<palabra.length;i++) {
