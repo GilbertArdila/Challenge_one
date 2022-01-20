@@ -73,6 +73,7 @@ copiar.addEventListener("click",function(event){
 /* ---------------------------Creamos función para desencriptar--------------------------------------- */
 desencriptar.addEventListener("click",function(event) {
     event.preventDefault();
+    //capturamos el valor ingresado en el input
     var palabra = gettingWord.value;
     //convertimos ese valor en array para poder recorrerlo
     var cripto = Array.from(palabra);
