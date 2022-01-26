@@ -60,9 +60,7 @@ footer{
 }
 
 @media (max-width:768px){
-    body {
-        background-color:yellow;
-    }
+   
 
     #ingreso{
         left:10%;
@@ -108,9 +106,7 @@ footer{
 
 }
 @media (max-width: 576px){
-    body {
-        background-color:red;
-    }
+
     header{
         margin: 0;
     }
