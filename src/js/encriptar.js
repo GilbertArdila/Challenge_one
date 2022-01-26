@@ -3,6 +3,7 @@ const GettingOutWord = document.getElementById("GettingOutWord");
 var encriptar=document.getElementById("encriptar");
 var desencriptar=document.getElementById("desencriptar");
 var copiar=document.getElementById("copiar");
+var limpiar=document.getElementById("limpiar");
 /* ---------------------------Creamos función para encriptar--------------------------------------- */
 
 encriptar.addEventListener("click",function(event){
@@ -15,9 +16,7 @@ encriptar.addEventListener("click",function(event){
     var reemplazo;
     //declaramos una variable para comprobar las condiciones
 
-
-
-    if(esMayus(palabra)===true && esAcento(palabra)===false ){
+    if( esAcento(palabra)===false ){
         //recorremos el array y reemplazamos las letras
         for(var i=0;i<cripto.length;i++){
             if(cripto[i].includes("a")){
@@ -49,6 +48,33 @@ encriptar.addEventListener("click",function(event){
 
 
             }
+            else if(cripto[i].includes("E")){
+                reemplazo=cripto[i].replace("E","ENTER");
+                cripto[i]=reemplazo;
+            }
+            else if(cripto[i].includes("A")){
+                reemplazo=cripto[i].replace("A","AI");
+                cripto[i]=reemplazo;
+            }
+            else if(cripto[i].includes("I")){
+                reemplazo=cripto[i].replace("I","IMES");
+                cripto[i]=reemplazo;
+
+
+            }
+            else if(cripto[i].includes("O")){
+                reemplazo=cripto[i].replace("O","OBER");
+                cripto[i]=reemplazo;
+
+
+
+            }
+            else if(cripto[i].includes("U")){
+                reemplazo=cripto[i].replace("U","UFAT");
+                cripto[i]=reemplazo;
+
+
+            }
 
         }
         //convertimos el array en string y eliminamos las comas
@@ -75,7 +101,6 @@ desencriptar.addEventListener("click",function(event) {
     event.preventDefault();
     var palabra = gettingWord.value;
     //convertimos ese valor en array para poder recorrerlo
-    var cripto = Array.from(palabra);
     var reemplazo;
 
     for(var i=0;i<palabra.length;i++) {
@@ -104,6 +129,32 @@ desencriptar.addEventListener("click",function(event) {
             reemplazo=palabra.replace("ufat", "u");
             palabra = reemplazo;
             
+        }
+        else if (palabra.includes("AI")) {
+            reemplazo = palabra.replace("AI", "A");
+            palabra = reemplazo;
+
+        }
+        else if(palabra.includes("ENTER")){
+            reemplazo=palabra.replace("ENTER", "E");
+            palabra = reemplazo;
+
+        }
+
+        else if(palabra.includes("IMES")){
+            reemplazo=palabra.replace("IMES", "I");
+            palabra = reemplazo;
+
+        }
+        else if(palabra.includes("OBER")){
+            reemplazo=palabra.replace("OBER", "O");
+            palabra = reemplazo;
+
+        }
+        else if(palabra.includes("UFAT")){
+            reemplazo=palabra.replace("UFAT", "U");
+            palabra = reemplazo;
+
         }
 
     }
@@ -150,3 +201,9 @@ function esAcento(palabra){
     }
     return acento;
 }
+/* ---------------------------Creamos función para limpiar inputs--------------------------------------- */
+limpiar.addEventListener("click",function(event){
+    event.preventDefault()
+    gettingWord.value="";
+    GettingOutWord.value="";
+})
