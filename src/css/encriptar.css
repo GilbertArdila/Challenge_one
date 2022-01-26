@@ -47,6 +47,11 @@ header{
     left:10px;
     margin:0 10px 30px 10px;
 }
+.button-limpiar{
+    position:relative;
+    left:33%;
+    bottom:0;
+}
 footer{
     background-color:black;
    position:absolute;
@@ -55,6 +60,9 @@ footer{
 }
 
 @media (max-width:768px){
+    body {
+        background-color:yellow;
+    }
 
     #ingreso{
         left:10%;
@@ -85,9 +93,19 @@ footer{
         left:0;
         margin:10px 10px 30px 10px;
     }
+    .button-limpiar{
+        position: absolute;
+        left:45%;
+        bottom:1%;
+    }
+    footer{
+        bottom:-105px;
+    }
+
     footer img{
         width:100px;
     }
+
 }
 @media (max-width: 576px){
     body {
@@ -112,5 +130,18 @@ footer{
     }
     #copiar{
         margin-bottom: 2px;
+    }
+    .button-limpiar{
+        position: absolute;
+        width:40px;
+        height:10px;
+        left:40%;
+        bottom:12.5%;
+    }
+    footer{
+        bottom:-15px;
+    }
+    footer img{
+        width:60px;
     }
 }

@@ -14,15 +14,17 @@
 </header>
 <div class="main" id="principal">
     <div class="row">
-
-       <div class="container-fluid">
            <p>Ingrese solo letras sin acento; el encriptador acepta tanto letras mayúsculas como minúsculas</p>
 
+        <div class="col-6" id="ingreso">
+           <p><strong>Mensaje inicial</strong></p>
            <label for="GettingWord">Ingresa la frase</label>
            <input type="text" class="form-control" id="GettingWord">
            <button type="button" class="btn btn-primary" id="encriptar">Encriptar</button>
            <button type="button" class="btn btn-primary" id="desencriptar">Desencriptar</button>
+
        </div>
+
 
 
         <div class="col-6 " id="salida">
@@ -30,6 +32,10 @@
             <label for="GettingOutWord">Frase encriptada</label>
             <input type="text" class="form-control" id="GettingOutWord">
             <button type="button" class="btn btn-primary" id="copiar">Copiar</button>
+        </div>
+
+        <div class="button-limpiar">
+            <button type="button" class="btn btn-primary" id="limpiar">Limpiar</button>
         </div>
 
     </div>
