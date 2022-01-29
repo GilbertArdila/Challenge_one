@@ -11,6 +11,9 @@ header{
     text-align: center;
     margin: 10px 20px 10px 20px;
 }
+.row p{
+    text-align: center;
+}
 
 #ingreso{
     position: relative;
@@ -58,14 +61,19 @@ footer{
     bottom:0;
     width:100%;
 }
-@media (max-width:1999.98px){
-
+footer img{
+    width:150px;
+}
+@media(max-width: 1400px) {
+    footer{
+        bottom:-149px;
+    }
     footer img{
         width:150px;
     }
 }
 
-@media (max-width:767.98px){
+@media (max-width:768px){
 
 
     #ingreso{
@@ -99,11 +107,11 @@ footer{
     }
     .button-limpiar{
         position: absolute;
-        left:45%;
-        bottom:1%;
+        left:32%;
+        top:730px;
     }
     footer{
-        bottom:-105px;
+        bottom:-250px;
     }
 
     footer img{
@@ -111,7 +119,7 @@ footer{
     }
 
 }
-@media (max-width: 575.98px){
+@media (max-width: 576px){
 
     header{
         margin: 0;
@@ -138,10 +146,10 @@ footer{
         width:40px;
         height:10px;
         left:40%;
-        bottom:12.5%;
+        top:680px;
     }
     footer{
-        bottom:-15px;
+        bottom:-151px;
     }
     footer img{
         width:60px;
